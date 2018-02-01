@@ -1,0 +1,35 @@
+CREATE TABLE members (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    password CHAR(128) NOT NULL
+) ENGINE = InnoDB;
+
+CREATE TABLE login_attempts (
+    user_id INT(11) NOT NULL,
+    time VARCHAR(30) NOT NULL
+) ENGINE=InnoDB
+
+CREATE TABLE Properties (
+    MlsId int NOT NULL AUTO_INCREMENT,
+    Street1 varchar(127) NOT NULL,
+    Street2 varchar(127),
+    City varchar(127) NOT NULL,
+    State varchar(15) NOT NULL,
+    Zip int NOT NULL,
+    Neighborhood varchar(255) NOT NULL,
+    SalesPrice int NOT NULL,
+    DateListed varchar(127),
+    Bedrooms int NOT NULL,
+    Photos int,
+    Bathrooms varchar(15) NOT NULL,
+    GarageSize int NOT NULL,
+    SquareFeet int NOT NULL,
+    LotSize int NOT NULL,
+    Description varchar(1023),
+    PRIMARY KEY (MlsID)
+);
+
+INSERT INTO Properties (Street1, City, State, Zip, Neighborhood, SalesPrice, DateListed,
+    Bedrooms, Photos, Bathrooms, GarageSize, SquareFeet, LotSize, Description)
+VALUES ("500 Smith", "Madras", "Or", 97100, "Central Madras", 550000, "2018-01-22", 5, 3, "2", 350, 4200, 6000, "Cute little house"); 
